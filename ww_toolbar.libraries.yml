@@ -1,0 +1,10 @@
+ww_toolbar:
+  css:
+    component:
+      css/ww_toolbar.reset.css: {}
+      css/ww_toolbar.css: {}
+
+ww_toolbar_theme:
+  css:
+    theme:
+      css/ww_toolbar.theme.css: {}

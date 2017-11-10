@@ -1,0 +1,94 @@
+<?php
+
+/**
+ * @file
+ * Contains ww_toolbar.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ww_toolbar_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ww_toolbar module.
+    case 'help.page.ww_toolbar':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a static toolbar independent of theme, similar to the admin toolbar') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_top().
+ *
+ * Add the toolbar to the top of the page automatically.
+ */
+function ww_toolbar_page_top(array &$page_top) {
+  $config = \Drupal::config('ww_toolbar.config');
+  $page_top['ww_toolbar'] = [
+    '#theme' => 'ww_toolbar',
+    '#access' => \Drupal::currentUser()->hasPermission('access ww toolbar'),
+    '#cache' => [
+      'contexts' => ['user.permissions'],
+      'tags' => ['config:ww_toolbar.config'],
+    ],
+    '#attached' => [
+      'library' => [
+        'ww_toolbar/ww_toolbar',
+      ],
+    ],
+    '#left_menu' => [
+      '#theme' => 'ww_toolbar_menu',
+      '#menu_id' => $config->get('left_menu'),
+    ],
+    '#right_menu' => [
+      '#theme' => 'ww_toolbar_menu',
+      '#menu_id' => $config->get('right_menu'),
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ww_toolbar_theme() {
+  return [
+    'ww_toolbar' => [
+      'template' => 'ww_toolbar',
+      'variables' => [
+        'left_menu' => NULL,
+        'right_menu' => NULL,
+      ],
+    ],
+    'ww_toolbar_menu' => [
+      'template' => 'ww_toolbar_menu',
+      'variables' => [
+        'menu_id' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements template_preprocess_HOOK().
+ *
+ * Prepares variables for ww_toolbar_menu.
+ *
+ * Default template: ww_toolbar_menu.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - menu_id
+ */
+function template_preprocess_ww_toolbar_menu(array &$variables) {
+  // Build the request menu.
+  if ($variables['menu_id']) {
+    $menu_builder = \Drupal::service('ww_toolbar.menu_builder');
+    $variables['menu'] = $menu_builder->build($variables['menu_id']);
+  }
+}

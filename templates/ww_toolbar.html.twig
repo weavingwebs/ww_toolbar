@@ -1,0 +1,18 @@
+{#
+/**
+ * Default template for the WW Toolbar.
+ *
+ * Available Variables:
+ * - left_menu: A renderable for the left menu.
+ * - right_menu: A renderable for the right menu.
+ */
+#}
+{{ attach_library('ww_toolbar/ww_toolbar_theme') }}
+<nav id="ww_toolbar" class="ww_toolbar">
+  <div class="ww_toolbar-left_menu">
+    {{ left_menu }}
+  </div>
+  <div class="ww_toolbar-right_menu">
+    {{ right_menu }}
+  </div>
+</nav>

@@ -1,0 +1,11 @@
+
+ww_toolbar.ww_toolbar_config_form:
+  path: '/admin/config/ww_toolbar'
+  defaults:
+    _form: '\Drupal\ww_toolbar\Form\WwToolbarConfigForm'
+    _title: 'WwToolbarConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+

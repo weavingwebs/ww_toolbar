@@ -1,0 +1,48 @@
+/**
+ * @file
+  * Aggressive resets so we can achieve a consistent look in hostile CSS
+  * environments.
+ *
+ * NOTE: This must be at at least component weight CSS to override core styles.
+ */
+
+/**
+ * Reset everything inside the toolbar.
+ */
+#ww_toolbar,
+#ww_toolbar * {
+  box-sizing: border-box;
+}
+#ww_toolbar {
+  font-size: small;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+@media print {
+  #ww_toolbar {
+    display: none;
+  }
+}
+
+/**
+ * Override core styling on menu items.
+ */
+.ww_toolbar li,
+.ww_toolbar .item-list,
+.ww_toolbar .item-list li,
+.ww_toolbar .menu-item,
+.ww_toolbar .menu-item--expanded {
+  list-style-type: none;
+  list-style-image: none;
+}
+.ww_toolbar .menu-item {
+  padding-top: 0;
+}
+.ww_toolbar .menu-item {
+  display: block;
+}
+.ww_toolbar a {
+  line-height: 1;
+}

@@ -1,0 +1,5 @@
+services:
+  ww_toolbar.menu_builder:
+    class: Drupal\ww_toolbar\WwToolbarMenuBuilder
+    arguments: ['@menu.link_tree', '@menu.active_trail']
+

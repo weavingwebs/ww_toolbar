@@ -1,0 +1,6 @@
+ww_toolbar.ww_toolbar_config_form:
+  title: 'WW Toolbar'
+  route_name: ww_toolbar.ww_toolbar_config_form
+  description: 'Manage WW Toolbar Configuration.'
+  parent: system.admin_config_ui
+  weight: 99

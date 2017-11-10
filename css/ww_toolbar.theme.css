@@ -1,0 +1,31 @@
+/**
+ * @file ww_toolbar.css
+ * Opinionated default theme of the ww_toolbar.
+ *
+ * If not required, override ww_toolbar.html.twig and remove/replace the
+ * attach_library('ww_toolbar/ww_toolbar_theme').
+ */
+
+/**
+ * Toolbar wrapper.
+ */
+.ww_toolbar {
+  background-color: #888;
+  box-shadow: inset 0 0 1px #333;
+}
+
+/**
+ * Toolbar menu links.
+ */
+.ww_toolbar .menu-item a {
+  color: #fff;
+  text-shadow: #666 0 0 1px;
+}
+.ww_toolbar .menu-item a.is-active,
+.ww_toolbar .menu-item a:active,
+.ww_toolbar .menu-item a:hover
+{
+  color: #000;
+  text-shadow: none;
+  text-decoration: none;
+}

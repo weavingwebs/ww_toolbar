@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Core styling for the toolbar.
+ *
+ * NOTE: This must be at at least component weight CSS to override core styles.
+ */
+
+/**
+ * Clearfix the toolbar.
+ */
+.ww_toolbar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * Left menu.
+ */
+.ww_toolbar-left_menu {
+  float: left;
+}
+
+/**
+ * Right menu.
+ */
+.ww_toolbar-right_menu {
+  float: right;
+}
+
+/**
+ * Menu items.
+ */
+.ww_toolbar .menu-item {
+  float: left;
+}
+
+/**
+ * Menu item links.
+ */
+.ww_toolbar .menu-item a {
+  display: inline-block;
+  padding: 1em;
+}
