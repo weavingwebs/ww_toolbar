@@ -31,14 +31,14 @@
 /**
  * Menu items.
  */
-.ww_toolbar .menu-item {
+.ww_toolbar .ww_toolbar_menu > ul > li {
   float: left;
 }
 
 /**
  * Menu item links.
  */
-.ww_toolbar .menu-item a {
+.ww_toolbar .ww_toolbar_menu > ul > li > a {
   display: inline-block;
   padding: 1em;
 }

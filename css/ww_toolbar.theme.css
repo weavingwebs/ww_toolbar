@@ -17,13 +17,13 @@
 /**
  * Toolbar menu links.
  */
-.ww_toolbar .menu-item a {
+.ww_toolbar .ww_toolbar_menu > ul > li > a {
   color: #fff;
   text-shadow: #666 0 0 1px;
 }
-.ww_toolbar .menu-item a.is-active,
-.ww_toolbar .menu-item a:active,
-.ww_toolbar .menu-item a:hover
+.ww_toolbar .ww_toolbar_menu > ul > li > a.is-active,
+.ww_toolbar .ww_toolbar_menu > ul > li > a:active,
+.ww_toolbar .ww_toolbar_menu > ul > li > a:hover
 {
   color: #000;
   text-shadow: none;
