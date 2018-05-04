@@ -1,0 +1,14 @@
+{
+    "name": "ww/ww_toolbar",
+    "type": "drupal-module",
+    "description": "Provides a static toolbar independent of theme, similar to the admin toolbar",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://git.weavingwebs.co.uk:8443/modules/ww_toolbar",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://git.weavingwebs.co.uk:8443/modules/ww_toolbar/issues",
+        "source": "https://git.weavingwebs.co.uk:8443/modules/ww_toolbar"
+    },
+    "require": { }
+}
