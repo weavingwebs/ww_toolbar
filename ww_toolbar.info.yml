@@ -2,4 +2,5 @@ name: WW Toolbar
 type: module
 description: Provides a static toolbar independent of theme, similar to the admin toolbar
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: __ww__
