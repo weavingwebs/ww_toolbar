@@ -22,7 +22,7 @@ class WwToolbarMenuBuilder {
    *
    * @var \Drupal\Core\Menu\MenuActiveTrailInterface
    */
-  protected $menuActiveTrail;
+  protected $activeTrail;
 
   /**
    * Constructs a new WwToolbarMenuBuilder object.
